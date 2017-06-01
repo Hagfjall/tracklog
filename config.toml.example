@@ -4,6 +4,9 @@ listen_address = ":8080"
 csrf_auth_key = "SECRETSECRETSECRETSECRETSECRETSE"
 signing_key = "SECRETSECRETSECRETSECRETSECRETSECRET"
 mapbox_access_token = ""
+reverse_proxy_auth = false
+reverse_proxy_auth_header = "X-Username"
+reverse_proxy_auth_auto_register = false
 
 [db]
 driver = "postgres"
