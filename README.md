@@ -29,7 +29,7 @@ Now, build the command line programs:
 Create and initialize a new Postgres database:
 
     createdb tracklog
-    psql tracklog < db/postgres.sql
+    psql tracklog < pkg/db/postgres.sql
 
 Add a new user:
 
