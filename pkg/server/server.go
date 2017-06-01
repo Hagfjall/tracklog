@@ -13,10 +13,10 @@ import (
 	"github.com/gorilla/csrf"
 	"github.com/gorilla/handlers"
 	"github.com/julienschmidt/httprouter"
-	"github.com/thcyron/tracklog"
-	"github.com/thcyron/tracklog/pkg/config"
-	"github.com/thcyron/tracklog/pkg/db"
-	"github.com/thcyron/tracklog/pkg/models"
+	"github.com/kaleworsley/tracklog"
+	"github.com/kaleworsley/tracklog/pkg/config"
+	"github.com/kaleworsley/tracklog/pkg/db"
+	"github.com/kaleworsley/tracklog/pkg/models"
 )
 
 // DataDir points to the directory where the public/ and templates/ directories are.

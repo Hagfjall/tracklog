@@ -2,16 +2,16 @@
 
 **Tracklog** is a web application for managing GPX track files written in Go.
 
-<a href="https://raw.githubusercontent.com/thcyron/tracklog/master/doc/screenshots/logs.jpg"><img src="doc/screenshots/logs-thumbnail.jpg" width="300"></a>
-<a href="https://raw.githubusercontent.com/thcyron/tracklog/master/doc/screenshots/log.jpg"><img src="doc/screenshots/log-thumbnail.jpg" width="300"></a>
+<a href="https://raw.githubusercontent.com/kaleworsley/tracklog/master/doc/screenshots/logs.jpg"><img src="doc/screenshots/logs-thumbnail.jpg" width="300"></a>
+<a href="https://raw.githubusercontent.com/kaleworsley/tracklog/master/doc/screenshots/log.jpg"><img src="doc/screenshots/log-thumbnail.jpg" width="300"></a>
 
 ## Run Tracklog with Docker
 
-There’s a Docker image [thcyron/tracklog](https://hub.docker.com/r/thcyron/tracklog)
+There’s a Docker image [kaleworsley/tracklog](https://hub.docker.com/r/kaleworsley/tracklog)
 for Tracklog. This image only contains the server and import binary, you have to
 bring your own Postgres server. You also have to provide a config file.
 
-    docker run -v /path/to/config.toml:/config.toml -p 8080:8080 thcyron/tracklog
+    docker run -v /path/to/config.toml:/config.toml -p 8080:8080 kaleworsley/tracklog
 
 ## Installation
 

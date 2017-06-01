@@ -4,8 +4,8 @@ import (
 	"math"
 	"time"
 
+	"github.com/kaleworsley/tracklog/pkg/utils"
 	"github.com/thcyron/gpx"
-	"github.com/thcyron/tracklog/pkg/utils"
 )
 
 type Point struct {

@@ -6,7 +6,7 @@ import (
 
 	"github.com/gorilla/context"
 	"github.com/julienschmidt/httprouter"
-	"github.com/thcyron/tracklog/pkg/models"
+	"github.com/kaleworsley/tracklog/pkg/models"
 )
 
 type contextKey int

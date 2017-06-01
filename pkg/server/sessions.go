@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/thcyron/tracklog/pkg/models"
+	"github.com/kaleworsley/tracklog/pkg/models"
 	"golang.org/x/crypto/bcrypt"
 )
 

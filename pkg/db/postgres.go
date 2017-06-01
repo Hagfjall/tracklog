@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 
+	"github.com/kaleworsley/tracklog/pkg/models"
 	_ "github.com/lib/pq"
 	"github.com/thcyron/sqlbuilder"
-	"github.com/thcyron/tracklog/pkg/models"
 )
 
 type Postgres struct {

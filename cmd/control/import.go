@@ -9,7 +9,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/thcyron/tracklog/pkg/models"
+	"github.com/kaleworsley/tracklog/pkg/models"
 )
 
 func importUsage() {

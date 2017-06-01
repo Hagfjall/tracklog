@@ -7,7 +7,7 @@ import (
 	"syscall"
 	"unicode/utf8"
 
-	"github.com/thcyron/tracklog/pkg/models"
+	"github.com/kaleworsley/tracklog/pkg/models"
 
 	"golang.org/x/crypto/bcrypt"
 	"golang.org/x/crypto/ssh/terminal"

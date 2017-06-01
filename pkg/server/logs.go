@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/thcyron/tracklog/pkg/geo"
-	"github.com/thcyron/tracklog/pkg/heartrate"
-	"github.com/thcyron/tracklog/pkg/models"
-	"github.com/thcyron/tracklog/pkg/rdp"
-	"github.com/thcyron/tracklog/pkg/utils"
+	"github.com/kaleworsley/tracklog/pkg/geo"
+	"github.com/kaleworsley/tracklog/pkg/heartrate"
+	"github.com/kaleworsley/tracklog/pkg/models"
+	"github.com/kaleworsley/tracklog/pkg/rdp"
+	"github.com/kaleworsley/tracklog/pkg/utils"
 )
 
 const logTimeFormat = "2006-01-02 15:04:05"
