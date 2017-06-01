@@ -4,9 +4,12 @@ import (
 	"bytes"
 	"fmt"
 	"html/template"
+	"math/rand"
 	"net/http"
 	"path"
 	"time"
+
+	"golang.org/x/crypto/bcrypt"
 
 	"github.com/codegangsta/negroni"
 	"github.com/gorilla/context"
@@ -18,6 +21,10 @@ import (
 	"github.com/kaleworsley/tracklog/pkg/db"
 	"github.com/kaleworsley/tracklog/pkg/models"
 )
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
 
 // DataDir points to the directory where the public/ and templates/ directories are.
 var DataDir = "."
@@ -99,6 +106,41 @@ func (s *Server) wrapHandler(handler HandlerFunc) httprouter.Handle {
 }
 
 func (s *Server) userAuthMiddleware(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
+	if s.config.Server.ReverseProxyAuth {
+		username := r.Header.Get(s.config.Server.ReverseProxyAuthHeader)
+		if len(username) > 0 {
+			user, err := s.db.UserByUsername(username)
+			if user == nil && err == nil {
+				if s.config.Server.ReverseProxyAuthAutoRegister {
+					pwbytes := make([]byte, 128)
+					rand.Read(pwbytes)
+					pwhash, _ := bcrypt.GenerateFromPassword(pwbytes, bcrypt.DefaultCost)
+
+					user := &models.User{
+						Username: username,
+						Password: string(pwhash),
+					}
+
+					s.db.AddUser(user)
+
+					ctx := NewContext(r, w)
+					ctx.SetUser(user)
+
+					next(w, r)
+					return
+				}
+			}
+
+			if user != nil {
+				ctx := NewContext(r, w)
+				ctx.SetUser(user)
+
+				next(w, r)
+				return
+			}
+		}
+	}
+
 	user, err := s.userFromRequest(r)
 	if err != nil {
 		panic(err)
