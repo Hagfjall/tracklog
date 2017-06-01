@@ -2,6 +2,10 @@
 
 **Tracklog** is a web application for managing GPX track files written in Go.
 
+**This is a fork of [tracklog](https://github.com/thcyron/tracklog) by [Thomas Cyron](https://github.com/thcyron).**
+
+---
+
 <a href="https://raw.githubusercontent.com/kaleworsley/tracklog/master/doc/screenshots/logs.jpg"><img src="doc/screenshots/logs-thumbnail.jpg" width="300"></a>
 <a href="https://raw.githubusercontent.com/kaleworsley/tracklog/master/doc/screenshots/log.jpg"><img src="doc/screenshots/log-thumbnail.jpg" width="300"></a>
 
