@@ -46,3 +46,5 @@ You can batch-import your GPX files with:
 ## License
 
 Tracklog is licensed under the MIT license.
+
+Copyright (c) 2016 Thomas Cyron, 2017 Kale Worsley.
