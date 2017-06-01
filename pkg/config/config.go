@@ -9,11 +9,14 @@ import (
 
 type Config struct {
 	Server struct {
-		Development       bool   `toml:"development"`
-		ListenAddress     string `toml:"listen_address"`
-		CSRFAuthKey       string `toml:"csrf_auth_key"`
-		SigningKey        string `toml:"signing_key"`
-		MapboxAccessToken string `toml:"mapbox_access_token"`
+		Development                  bool   `toml:"development"`
+		ListenAddress                string `toml:"listen_address"`
+		CSRFAuthKey                  string `toml:"csrf_auth_key"`
+		SigningKey                   string `toml:"signing_key"`
+		MapboxAccessToken            string `toml:"mapbox_access_token"`
+		ReverseProxyAuth             bool   `toml:"reverse_proxy_auth"`
+		ReverseProxyAuthHeader       string `toml:"reverse_proxy_auth_header"`
+		ReverseProxyAuthAutoRegister bool   `toml:"reverse_proxy_auth_auto_register"`
 	} `toml:"server"`
 	DB struct {
 		Driver string `toml:"driver"`
