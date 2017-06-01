@@ -19,8 +19,8 @@ First, make sure you have Go and Node.js installed.
 
 To build the JavaScript and CSS assets, run:
 
-    npm install
-    npm run build
+    yarn install
+    yarn run build
 
 Now, build the command line programs:
 
